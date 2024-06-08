@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+body {
+  background-color: white;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.dashboard{
+  border: 2px;
+  border-radius: 0 20px 20px 0;
+  background-color: rgb(87, 81, 121, 0.1);
+  width: 400px;
+  height: 48.4rem;
+}
+.dashboard .logo img{
+  width: 300px;
+}
+.dashboard .logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .buttons ul{
+  list-style-type: none;
+}
+.buttons ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons ul li a{
+  color:rgba(0,0,0,0.5);
+  font-family: Poppins, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px;
+  border-radius: 5px 5px 5px 5px;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 35px;
+  padding-top: 5px;
+  text-align: center;
+}
+.prints {
+    margin-left: 5px;
+    position: relative;
+    width: 1130px;
+    height: 600px;
+    background: url(/images/bg.png)
+      no-repeat center;
+    background-size: cover;
+    z-index: 1;
+    border-radius: 20px 20px 0 0;
+    overflow: visible auto;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    margin: 118px 0 250px 0;
+    color: rgba(251, 251, 251, 0.9);
+    font-family: Poppins, var(--default-font-family);
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 150px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 7;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke: 3px rgba(0, 0, 0, 0);
+  }
+  .sub-header {
+    position: relative;
+    width: 500px;
+    height: 136px;
+    color: #ffffff;
+    font-family: Poppins, var(--default-font-family);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    text-overflow: initial;
+    letter-spacing: 1px;
+    z-index: 5;
+    overflow: hidden;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  }
+  .why{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    border: 1px;
+    background-color: rgb(87, 81, 121, 0.1);
+    border-radius: 0 0 20px 20px;
+    height: 173px;
+  }
+  .why .text{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .why .text b{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
