@@ -10,7 +10,16 @@
     <link rel="icon" href="images/icon.png">
 </head>
 <body>
+    <div class="menu-button" onclick="toggleSidebar()">&#9776; Menu</div>
     <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+            <div class="btn">
+                <ul>
+                    <li><a href="Icons.html"><i class='bx bxs-home'></i>&nbsp; Home</a></li>
+                    <li><a href="login page.html"><i class='bx bx-log-in'></i>&nbsp;Login</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="dashboard">
             <div class="logo">
                 <img src="images/icons.png">
@@ -18,7 +27,7 @@
             <div class="buttons">
                 <ul>
                     <li><a href="Icons.html"><i class='bx bxs-home'></i>&nbsp; Home</a></li>
-                    <li><a href="login page.html"><i class='bx bx-log-in'></i>&nbsp;Login</a></li>
+                    <li><a href="login-page.html"><i class='bx bx-log-in'></i>&nbsp;Login</a></li>
                 </ul>
             </div>
         </div>
@@ -53,7 +62,11 @@
                 </div>
             </div>
         </div>
-    </div>
-    <script src="js/login.js"></script>
+    <script src="js/login.js">
+        function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('visible');
+}
+    </script>
 </body>
 </html>

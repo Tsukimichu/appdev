@@ -6,27 +6,80 @@
   }
   body {
     background-color: white;
+    height: auto;
   }
   .wrapper{
       display: flex;
       flex-direction: row;
   }
-  .dashboard{
-    border: 2px;
+  .menu-button {
+    display: none;
+  }
+  
+  .sidebar {
+    display: none;
+    /* Additional styling for the sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    color: white;
+    z-index: 1000;
+    transition: left 0.3s;
+  }
+  
+  .sidebar.visible {
+    display: block; /* Show sidebar when visible class is added */
+  }
+  
+  .sidebar .btn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar .btn ul li {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar .btn ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .sidebar .btn ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar .btn ul li a:hover {
+    background-color: #555;
+  }
+  
+  .dashboard {
+    border: 0.125rem;
     border-radius: 0 20px 20px 0;
     background-color: rgb(87, 81, 121, 0.1);
     width: 25rem;
     height: 48.4rem;
   }
-  .dashboard .logo img{
-    width: 300px;
+  
+  .dashboard .logo img {
+    width: 18.75rem;
   }
-  .dashboard .logo{
+  
+  .dashboard .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
+  
   .buttons{
     display: flex;
     align-items: center;
@@ -40,28 +93,28 @@
     align-items: center;
     justify-content: center;
   }
-  .buttons ul li a{
-    color:rgba(0,0,0,0.5);
+  .buttons ul li a {
+    color: rgba(0, 0, 0, 0.5);
     font-family: Poppins, var(--default-font-family);
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     border: 1px;
-    border-radius: 5px 5px 5px 5px;
-    margin-bottom: 30px;
-    width: 250px;
-    height: 35px;
-    padding-top: 5px;
+    border-radius: 0.313rem 0.313rem 0.313rem 0.313rem;
+    margin-bottom: 1.875rem;
+    width: 15.625rem;
+    height: 2.188rem;
+    padding-top: 0.313rem;
     text-align: center;
   }
   .sub-body{
     border: 1px;
     background-color: rgb(87, 81, 121, 0.1);
-    width: 1130px;
-    height: 48.4rem;
-    margin-left: 5px;
-    border-radius: 20px 20px 20px 20px;
+    width: 70.625rem;
+    height: auto;
+    margin-left: 0.313rem;
+    border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,4 +179,83 @@
 }
 .btns button{
     font-size: 1.25rem;
+}
+.pop-box {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.14);
+}
+
+.pop-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  height: 300px;
+}
+.pop-content p , b{
+  padding-top: 20px;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.pop-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pop-close:hover,
+.pop-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.or{
+  text-align: center;
+}
+@media screen and (max-width: 390px) {
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+  }
+
+  .wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .menu-button {
+      display: block;
+      margin: 20px;
+      font-size: 20px;
+      cursor: pointer;
+  }
+
+  .sidebar.visible {
+      display: block;
+  }
+
+  .dashboard {
+      display: none;
+  }
+
+  .sub-body {
+      width: calc(100vw - 40px);
+      height: auto;
+      padding: 10px;
+      margin: 5px;
+  }
+
 }

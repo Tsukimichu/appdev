@@ -4,13 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Icons</title>
+    <title>Signup - Icons</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/login.css">
     <link rel="icon" href="images/icon.png">
 </head>
 <body>
+    <div class="menu-button" onclick="toggleSidebar()">&#9776; Menu</div>
     <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+            <div class="btn">
+                <ul>
+                    <li><a href="Icons.html"><i class='bx bxs-home'></i>&nbsp; Home</a></li>
+                    <li><a href="login page.html"><i class='bx bx-log-in'></i>&nbsp;Login</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="dashboard">
             <div class="logo">
                 <img src="images/icons.png">
@@ -55,6 +64,19 @@
 
         </div>
     </div>
-    <script src="js/register.js"></script>
+    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        window.location.href = 'loginPage.html'; 
+        });
+        });
+               function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('visible');
+}
+    </script>
 </body>
 </html>

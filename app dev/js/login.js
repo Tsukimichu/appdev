@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault(); 
-        window.location.href = 'home page.html'; 
+        window.location.href = 'homePage.html'; 
     });
 });
+function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('visible');
+}

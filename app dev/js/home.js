@@ -1,7 +1,10 @@
 function toggleSidebar() {
-    document.querySelector('.sidebar').classList.toggle('visible');
-    document.querySelector('.wrapper').classList.toggle('shifted');
+    var sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('visible');
 }
+
+// Add event listener to the menu button
+document.querySelector('.menu-button').addEventListener('click', toggleSidebar);
 
 function confirmLogout() {
     const userConfirmed = confirm("Do you want to log out?");

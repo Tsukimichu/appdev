@@ -1,208 +1,304 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins",sans-serif;
-  }
-  body {
-      background-color: rgb(218, 31, 31);
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+body {
+  background-color: white;
+  height: auto;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.menu-button {
+  display: none;
+}
 
-    @media screen and (min-width: 800px) {
-      *{
+.sidebar {
+  display: none;
+  /* Additional styling for the sidebar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  padding-top: 20px;
+  color: white;
+  z-index: 1000;
+  transition: left 0.3s;
+}
+
+.sidebar.visible {
+  display: block; /* Show sidebar when visible class is added */
+}
+
+.sidebar .btn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .btn ul li {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #555;
+  transition: background-color 0.3s;
+}
+
+.sidebar .btn ul li:last-child {
+  border-bottom: none;
+}
+
+.sidebar .btn ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar .btn ul li a:hover {
+  background-color: #555;
+}
+
+.dashboard {
+  border: 0.125rem;
+  border-radius: 0 1.25rem 1.25rem 0;
+  background-color: rgb(87, 81, 121, 0.1);
+  width: 25rem;
+  height: 48.4rem;
+}
+
+.dashboard .logo img {
+  width: 18.75rem;
+}
+
+.dashboard .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .buttons ul{
+  list-style-type: none;
+}
+.buttons ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons ul li a {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins, var(--default-font-family);
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px;
+  border-radius: 0.313rem 0.313rem 0.313rem 0.313rem;
+  margin-bottom: 1.875rem;
+  width: 15.625rem;
+  height: 2.188rem;
+  padding-top: 0.313rem;
+  text-align: center;
+}
+.sub-body{
+  border: 1px;
+  background-color: rgb(87, 81, 121, 0.1);
+  width: 70.625rem;
+  height: 48.4rem;
+  margin-left: 0.313rem;
+  border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box h1{
+  margin-top: 0.625rem;
+  text-align: center;
+  font-size: 3.125rem;
+  margin-bottom: 1.875rem;
+}
+.sub-body .box{
+  display: flex;
+  flex-direction: row;
+  border: 1px;
+  background-color: white;
+  width: 80%;
+  height: 25rem;
+  border-radius: 0.625rem 0.625rem 0.625rem 0.625rem ;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+    .container {
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+  }
+  
+  .login-options, .login-form {
+      padding: 1.25rem;
+  }
+  
+  .login-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      background-color: #ffffff;
+      width: 25rem;
+  }
+  
+  .login-options button {
+      width: 80%;
+      padding: 0.625rem 0;
+      margin: 0.625rem 0;
+      border: none;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      cursor: pointer;
+  }
+  
+  .facebook-btn {
+      background-color: #1877f2;
+      color: white;
+  }
+  .facebook-btn img{
+    width: 0.938rem;
+  }
+  
+  .google-btn {
+    align-items: center;
+      background-color: #00000025;
+      color: #000;
+      border: 1px solid #ccc;
+  }
+  .google-btn img{
+    width: 1.25rem;
+  }
+  
+  .apple-btn {
+    align-items: center;
+      background-color: #000000;
+      color: white;
+  }
+  .apple-btn img{
+    width: 1.25rem;
+  }
+  
+  .login-form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+      width: 25rem;
+  }
+  
+  .login-form h2 {
+      margin-bottom: 1.25rem;
+  }
+  
+  .input-group {
+      margin-bottom: 15px;
+  }
+  
+  .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+  }
+  
+  .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+  }
+  
+  .login-btn {
+      width: 100%;
+      padding: 10px 0;
+      border: none;
+      border-radius: 4px;
+      background-color: #1877f2;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+  }
+  
+  .login-form p {
+      margin-top: 10px;
+      font-size: 14px;
+  }
+  
+  .login-form a {
+      color: #1877f2;
+      text-decoration: none;
+  }
+  
+  .login-form a:hover {
+      text-decoration: underline;
+  }
+  @media screen and (max-width: 390px) {
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Poppins",sans-serif;
+        font-family: "Poppins", sans-serif;
     }
-      body {
-        background-color: white;
-        
-      }
-      .wrapper{
-          display: flex;
-          flex-direction: row;
-      }
-      .dashboard{
-        border: 2px;
-        border-radius: 0 20px 20px 0;
-        background-color: rgb(87, 81, 121, 0.1);
-        width: 400px;
-        height: 48.4rem;
-      }
-      .dashboard .logo img{
-        width: 300px;
-      }
-      .dashboard .logo{
-        display: flex;
+  
+    .wrapper {
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-bottom: 40px;
-      }
-      .buttons{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-       .buttons ul{
-        list-style-type: none;
-      }
-      .buttons ul li{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .buttons ul li a{
-        text-decoration: none;
-        color:rgba(0,0,0,0.5);
-        font-family: Poppins, var(--default-font-family);
-        font-size: 30px;
-        font-weight: 700;
-        text-transform: uppercase;
-        border: 1px ;
-        border-radius: 5px 5px 5px 5px;
-        margin-bottom: 30px;
-        width: 200px;
-        height: 35px;
-        padding-top: 5px;
-        text-align: center;
-      }
-      .sub-body{
-        border: 1px;
-        border-radius: 20px 20px 20px 20px;
-        margin-left: 5px;
-        background-color:rgb(87, 81, 121, 0.1);
-        width: 1130px;
-        height: 48.4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .box h1{
-        margin-top: 10px;
-        text-align: center;
-        font-size: 50px;
-        margin-bottom: 30px;
-      }
-      .sub-body .box{
-        display: flex;
-        flex-direction: row;
-        border: 1px;
-        background-color: white;
-        width: 80%;
-        height: 400px;
-        border-radius: 10px 10px 10px 10px;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .container {
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
     }
-    
-    .login-options, .login-form {
-        padding: 20px;
+  
+    .menu-button {
+        display: block;
+        margin: 20px;
+        font-size: 20px;
+        cursor: pointer;
     }
-    
+  
+    .sidebar.visible {
+        display: block;
+    }
+  
+    .dashboard {
+        display: none;
+    }
+  
+    .sub-body {
+        width: calc(100vw - 40px);
+        height: auto;
+        padding: 10px;
+        margin: 5px;
+    }
+    .sub-body .box{
+      display: flex;
+      flex-direction: column;
+      border: 1px;
+      background-color: white;
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 10px 10px;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+    }
     .login-options {
       display: flex;
       flex-direction: column;
       align-items: center;
         background-color: #ffffff;
-        width: 400px;
-    }
-    
-    .login-options button {
-        width: 80%;
-        padding: 10px 0;
-        margin: 10px 0;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-    
-    .facebook-btn {
-        background-color: #1877f2;
-        color: white;
-    }
-    .facebook-btn img{
-      width: 15px;
-    }
-    
-    .google-btn {
-      align-items: center;
-        background-color: #00000025;
-        color: #000;
-        border: 1px solid #ccc;
-    }
-    .google-btn img{
-      width: 20px;
-    }
-    
-    .apple-btn {
-      align-items: center;
-        background-color: #000000;
-        color: white;
-    }
-    .apple-btn img{
-      width: 20px;
-    }
-    
-    .login-form {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-        width: 400px;
-    }
-    
-    .login-form h2 {
-        margin-bottom: 20px;
-    }
-    
-    .input-group {
-        margin-bottom: 15px;
-    }
-    
-    .input-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 14px;
-    }
-    
-    .input-group input {
         width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 14px;
+        border-radius: 10px 10px 10px 10px;
     }
     
-    .login-btn {
-        width: 100%;
-        padding: 10px 0;
-        border: none;
-        border-radius: 4px;
-        background-color: #1877f2;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-    }
-    
-    .login-form p {
-        margin-top: 10px;
-        font-size: 14px;
-    }
-    
-    .login-form a {
-        color: #1877f2;
-        text-decoration: none;
-    }
-    
-    .login-form a:hover {
-        text-decoration: underline;
-    }
-}
+  }

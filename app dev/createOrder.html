@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Order- Icons</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/create order.css">
+    <link rel="icon" href="images/icon.png">
+</head>
+<body>
+    <div class="menu-button" onclick="toggleSidebar()">&#9776; Menu</div>
+    <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+            <div class="btn">
+                <ul>
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="createOrder.html">Create Order</a></li>
+                    <li><a href="#" onclick="confirmLogout()">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="logo">
+                <img src="images/icons.png" alt="Logo">
+            </div>
+            <div class="buttons">
+                <ul>
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="createOrder.html">Create Order</a></li>
+                    <li><a href="#" onclick="confirmLogout()">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-body">
+            <div class="receipt">
+                <h2>Choose The Length of the Paper</h2>
+                <div class="sz">
+                    <label>
+                        <input type="checkbox" name="checkbox" required>
+                        Letter 
+                    </label>
+                    <label>
+                        <input type="checkbox" name="checkbox" required>
+                        A4
+                    </label>
+                    <label>
+                        <input type="checkbox" name="checkbox" required>
+                        Short
+                    </label>
+                </div>  
+                <div class="or">
+                    ------------or------------
+                </div> <br>
+                <div class="details">
+                    
+                    <h2>For Receipt Printing</h2>
+                    <label for="business">Name of Business:
+                        <input type="text" placeholder="Business Name">
+                    </label>
+                    <label for="Amount">Quantity of pad printed:
+                        <input type="number" placeholder="Number of Pads">
+                    </label>
+                    <label for="Size">Size of the Receipt:
+                        <input type="number" placeholder="Size">
+                    </label>
+                    <label>Other information need to be printed in the receipt:
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="btns">
+                    <button id="confirm" onclick="popBox()"> Confirm </button>
+                </div>
+            </div>
+            <div id="popBox" class="pop-box">
+                <div class="pop-content">
+                    <span class="pop-close" onclick="closePopBox()">&times;</span>
+                    <b class="thank-you-for">Thank you for the trust on us!</b>
+                    <p>Please do come to our physical store to pick up and do the payment!</p>
+                </div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('visible');
+        }
+        function confirmLogout() {
+    const userConfirmed = confirm("Do you want to log out?");
+    if (userConfirmed) {
+        window.location.href = 'Icons.html';
+    }
+}
+function popBox() {
+            var popBox = document.getElementById('popBox');
+            popBox.style.display = 'block';
+        }
+
+        function closePopBox() {
+            var popBox = document.getElementById('popBox');
+            popBox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault(); 
-        window.location.href = 'login page.html'; 
+        window.location.href = 'loginPage.html'; 
     });
 });

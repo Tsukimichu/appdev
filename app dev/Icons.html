@@ -10,34 +10,41 @@
     <link rel="icon" href="images/icon.png">
 </head>
 <body>
+    <div class="menu-button" onclick="toggleSidebar()">&#9776; Menu</div>
     <div class="wrapper">
+        <div class="sidebar" id="sidebar">
+            <div class="btn">
+                <ul>
+                    <li><a href="Icons.html">&nbsp; Home</a></li>
+                    <li><a href="login page.html">&nbsp;Login</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="dashboard">
             <div class="logo">
                 <img src="images/icons.png">
             </div>
             <div class="buttons">
                 <ul>
-                    <li><a href=""><i class='bx bxs-home'></i>&nbsp; Home</a></li>
+                    <li><a href="Icons.html"><i class='bx bxs-home'></i>&nbsp; Home</a></li>
                     <li><a href="login page.html"><i class='bx bx-log-in'></i>&nbsp;Login</a></li>
                 </ul>
             </div>
         </div>
-        <div>
-            <div class="prints">
+        <div class="sub-body">
                 <div class="bg">
                   <span class="header">Welcome to ICONS!</span
                   ><span class="sub-header">
-                    <p>At ICONS, we offer a wide array of printing solutions that cater
-                        to diverse needs,ensuring your vision comes to life with
+                    <p>At ICONS, we offer a wide array of printing solutions that cater to diverse needs,ensuring your vision comes to life with
                         precision and creativity.Our commitment is to deliver
                         exceptional quality and service, whether for personal
                         projects or business endeavors.</p>
                     </span>
                 </div>
-              </div>
-              <div class="why">
-                <h1><i class='bx bx-edit' ></i>&nbsp;Why Choose Us?</h1> <br>
+
+                
                 <div class="text">
+                    <h1><i class='bx bx-edit' ></i>&nbsp;Why Choose Us?</h1> <br>
                     &nbsp;Versatile Printing Options: From business cards and brochures to custom posters and
                     invitations, our range of services covers all your printing
                     needs. <br> 
@@ -52,9 +59,14 @@
                     processes wherever possible. &nbsp;
 
                 </div>
-            </div>
         </div>
 
     </div>
+    <script>
+                function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('visible');
+        }
+    </script>
 </body>
 </html>
